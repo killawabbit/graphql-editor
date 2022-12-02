@@ -21,7 +21,7 @@ export const App = () => {
         height: '100%',
         alignSelf: 'stretch',
         display: 'flex',
-        position: 'relative',
+        position: 'absolute',
       }}
     >
       <GraphQLEditor
