@@ -1,19 +1,12 @@
 # graphql-editor
 
-The handy docker image for [graphql-editor](https://github.com/graphql-editor/graphql-editor)
+The handy docker image for [graphql-editor](https://github.com/graphql-editor/graphql-editor) and [get-graphql-schema](https://github.com/prisma-labs/get-graphql-schema)
 
 ## Quick start
-Docker run
-```
-docker run -p 8080:3000 ghcr.io/tk42/graphql-editor:latest
-```
-or create and run docker-compose.yml
-```docker-compose.yml
-version: '3'
+### Editor
+To launch ```graphql-editor```, run ```docker compose up editor```
 
-services:
-  graphql-editor:
-    image: ghcr.io/tk42/graphql-editor:latest
-    ports: 
-     - 8080:3000
-```
+### Export
+To export the existing graphql schema, fill the blanks in ```.env.local``` copied from ```.env```
+and run ```docker compose up export```
+Then you'll get ```schema.graphql```
