@@ -5,5 +5,6 @@ RUN yarn install
 COPY ./public ./public
 COPY ./src ./src
 RUN yarn build
-WORKDIR /home/build
-CMD npx serve -s
+RUN npm install -g get-graphql-schema
+COPY ./entrypoint.sh .
+CMD ./entrypoint.sh
